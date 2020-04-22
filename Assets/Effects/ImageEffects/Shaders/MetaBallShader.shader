@@ -17,9 +17,14 @@ Properties {
 
 
 
-	_FirstColor("First color", Color) = (1,1,1,1)
-	_SecondColor("Second color", Color) = (1,1,1,1)
-	_FinalColor("Final color", Color) = (1,1,1,1)
+	_1Color("First color", Color) = (1,1,1,1) // always white 
+	_2Color("Second color", Color) = (1,1,1,1)      //1
+	_3Color("Third color", Color) = (1,1,1,1)       //2
+	_4Color("Fourth color", Color) = (1,1,1,1)      //3
+	_5Color("Fifth color", Color) = (1,1,1,1)       //4
+	_6Color("Sixth color", Color) = (1,1,1,1)       //5
+	_7Color("Seventh color", Color) = (1,1,1,1)     //6
+	_8Color("Eighth color", Color) = (1,1,1,1)      //7
 		// Extra
 	//_ThirdColor("Third color", Color) = (1,1,1,1)
 	//_ForthColor("Forth color", Color) = (1,1,1,1)
@@ -52,11 +57,14 @@ SubShader {
 			float4 _MainTex_ST;
 			fixed _Cutoff;
 
-			half4 _FirstColor;
-			half4 _SecondColor;
-			half4 _FinalColor;
-			half4 _ThirdColor;
-			half4 _ForthColor;
+			half4 _1Color;
+			half4 _2Color;
+			half4 _3Color;
+			half4 _4Color;
+			half4 _5Color;
+			half4 _6Color;
+			half4 _7Color;
+			half4 _8Color;
 
 			fixed _Stroke;
 			half4 _StrokeColor;
@@ -71,6 +79,7 @@ SubShader {
 			fixed4 frag (v2f i) : SV_Target {
 				fixed4 col = tex2D(_MainTex, i.texcoord);
 		    	clip(col.a - _Cutoff);
+				
 				if (col.g > 0.5 && col.b > 0.5 && col.r > 0.5)//White
 				{
 					if (col.a < _Stroke) {
@@ -78,7 +87,37 @@ SubShader {
 					}
 					else
 					{
-						col = _ThirdColor;
+						col = _1Color;
+					}
+				}
+				else if (col.r > 0.5 && col.g > 0.5) // Yellow
+				{
+					if (col.a < _Stroke) {
+						col = _StrokeColor;
+					}
+					else
+					{
+						col = _5Color;
+					}
+				}
+				else if (col.r > 0.5 && col.b > 0.5) // Pink
+				{
+					if (col.a < _Stroke) {
+						col = _StrokeColor;
+					}
+					else
+					{
+						col = _6Color;
+					}
+				}
+				else if (col.g > 0.5 && col.b > 0.5) // cayan
+				{
+					if (col.a < _Stroke) {
+						col = _StrokeColor;
+					}
+					else
+					{
+						col = _7Color;
 					}
 				}
 			    else if (col.r > 0.5) // Red
@@ -88,7 +127,7 @@ SubShader {
 					}
 					else
 					{
-						col = _FinalColor;
+						col = _2Color;
 					}
 				}
 				else if (col.b > 0.5) // Blue
@@ -98,7 +137,7 @@ SubShader {
 					}
 					else
 					{
-						col = _FirstColor;
+						col = _3Color;
 					}
 				}
 				else if (col.g > 0.5) // Green
@@ -108,7 +147,18 @@ SubShader {
 					}
 					else
 					{
-						col = _SecondColor;
+						col = _4Color;
+					}
+				}
+				
+				else if (col.g < 0.5f && col.b < 0.5f && col.r < 0.5f) // Black
+				{
+					if (col.a < _Stroke) {
+						col = _StrokeColor;
+					}
+					else
+					{
+						col = _8Color;
 					}
 				}
 				else 
@@ -118,7 +168,7 @@ SubShader {
 					}
 					else
 					{
-						col = _ForthColor;
+						col = col;
 					}
 				}
 				return col;
