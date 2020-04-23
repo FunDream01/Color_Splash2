@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TextureWithShader
-  m_Shader: {fileID: 4800000, guid: 3f2473e836231f340af81c4989f12061, type: 3}
+  m_Shader: {fileID: 4800000, guid: a642594c607c389479122fa4cdfbb666, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -74,19 +74,19 @@ Material:
     - _Parallax: 0.02
     - _SecondaryAlpha: 0.437
     - _SrcBlend: 1
-    - _Stroke: 0
+    - _Stroke: 0.5
     - _TertiaryAlpha: 0.334
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _1Color: {r: 0.99215686, g: 1, b: 0, a: 0}
-    - _2Color: {r: 0, g: 0, b: 0, a: 0}
-    - _3Color: {r: 1, g: 0.5529412, b: 0, a: 0}
-    - _4Color: {r: 0, g: 1, b: 0.96862745, a: 0}
+    - _1Color: {r: 1, g: 1, b: 1, a: 0}
+    - _2Color: {r: 1, g: 0, b: 0, a: 0}
+    - _3Color: {r: 0, g: 0, b: 1, a: 0}
+    - _4Color: {r: 0.36862746, g: 0, b: 1, a: 0}
     - _5Color: {r: 1, g: 1, b: 0, a: 0}
-    - _6Color: {r: 0, g: 1, b: 0.1764706, a: 0}
-    - _7Color: {r: 0.6313726, g: 0.5019608, b: 0.2784314, a: 0}
-    - _8Color: {r: 0.59607846, g: 0.1882353, b: 0.43137255, a: 0}
+    - _6Color: {r: 1, g: 0, b: 1, a: 0}
+    - _7Color: {r: 0, g: 1, b: 1, a: 0}
+    - _8Color: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 0.61764705, b: 0.61764705, a: 1}
     - _EighthColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -100,6 +100,6 @@ Material:
     - _SeventhColor: {r: 1, g: 1, b: 1, a: 1}
     - _SixthColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _StrokeColor: {r: 1, g: 1, b: 1, a: 0.14509805}
+    - _StrokeColor: {r: 1, g: 1, b: 1, a: 0.5686275}
     - _TertiaryColor: {r: 1, g: 0.5441177, b: 0.5441177, a: 1}
     - _ThirdColor: {r: 0.9056604, g: 0.71342117, b: 0.88153625, a: 1}
