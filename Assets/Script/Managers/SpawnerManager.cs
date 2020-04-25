@@ -11,7 +11,6 @@ public class SpawnerManager : MonoBehaviour
     public float delay = 0.1f;
    
     
-    
     //to start spawning
     public void SpawnButton()
     {
@@ -24,25 +23,16 @@ public class SpawnerManager : MonoBehaviour
                                                   // then from unity we add them to Trigger-event 
     }
 
-
-
-
-
-
-
     IEnumerator spawning()
     {
         while (startSpawning&&NumberOfBalls>0) 
         {
-            Instantiate(ball, spawner.position, Quaternion.identity);   //we use this to spawn balls(game object,position , rotation)  Quaternion.identity means rotation =0
+            GameObject gameObject= Instantiate(ball, spawner.position, Quaternion.identity);   //we use this to spawn balls(game object,position , rotation)  Quaternion.identity means rotation =0
+            gameObject.GetComponent<SpriteRenderer>().color=IntToColor.switchColor(0);
             NumberOfBalls--;
             yield return new WaitForSeconds(delay);                     //we have to have this to make (IEnumerator spawning()) works and we added delay to the spawning balls
 
         }
     }
-
-   
-
-
 
 }

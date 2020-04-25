@@ -14,10 +14,9 @@ public class Particle : MonoBehaviour
 
     void Update()
     {
-        
+        transform.Rotate(Vector3.forward*Time.deltaTime,Space.World);
     }
     private void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("Trigger");
         if (other.CompareTag(Tags.Obstacle)){
             int ObstacleIndex = other.GetComponent<ColorizingObstacle>().ColorIndex;
             if (Mixer.ColorIndex(ObstacleIndex,ColorIndex)!=0){

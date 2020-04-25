@@ -22,7 +22,7 @@ Properties {
 	_3Color("Third color", Color) = (1,1,1,1)       //2
 	_4Color("Fourth color", Color) = (1,1,1,1)      //3
 	_5Color("Fifth color", Color) = (1,1,1,1)       //4
-	_6Color("Sixth color", Color) = (1,1,1,1)       //5
+	//_6Color("Sixth color", Color) = (1,1,1,1)       //5
 		// Extra
 	//_ThirdColor("Third color", Color) = (1,1,1,1)
 	//_ForthColor("Forth color", Color) = (1,1,1,1)
@@ -60,7 +60,6 @@ SubShader {
 			half4 _3Color;
 			half4 _4Color;
 			half4 _5Color;
-			half4 _6Color;
 
 			fixed _Stroke;
 			half4 _StrokeColor;
@@ -116,16 +115,6 @@ SubShader {
 						col = _4Color;
 					}
 				}
-				else if (col.g == 0.5f && col.b == 0.5f && col.r == 0.5f) // gray
-				{
-					if (col.a < _Stroke) {
-						col = _StrokeColor;
-					}
-					else
-					{
-						col = _5Color;
-					}
-				}
 				else if (col.g < 0.5f && col.b < 0.5f && col.r < 0.5f) // Black
 				{
 					if (col.a < _Stroke) {
@@ -133,7 +122,7 @@ SubShader {
 					}
 					else
 					{
-						col = _6Color;
+						col = _5Color;
 					}
 				}
 				else 

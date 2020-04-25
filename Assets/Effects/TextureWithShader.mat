@@ -83,7 +83,7 @@ Material:
     - _2Color: {r: 1, g: 0, b: 0, a: 0}
     - _3Color: {r: 0, g: 0, b: 1, a: 0}
     - _4Color: {r: 0.36862746, g: 0, b: 1, a: 0}
-    - _5Color: {r: 1, g: 1, b: 0, a: 0}
+    - _5Color: {r: 1, g: 0, b: 0.7647059, a: 0}
     - _6Color: {r: 1, g: 0, b: 1, a: 0}
     - _7Color: {r: 0, g: 1, b: 1, a: 0}
     - _8Color: {r: 0, g: 0, b: 0, a: 0}
