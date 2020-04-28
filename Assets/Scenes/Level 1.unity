@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 179625146}
   - component: {fileID: 179625145}
   - component: {fileID: 179625148}
+  - component: {fileID: 179625149}
   m_Layer: 0
   m_Name: Red
   m_TagString: Obstacle
@@ -258,7 +259,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.62, y: 5.78}
+    oldSize: {x: 15.323985, y: 3.65}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -306,7 +307,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6b13e552aa3ef1499e1bf605c95b6fc, type: 3}
+  m_Sprite: {fileID: -7698801141481191845, guid: ddc9d4e542ff25d4883cfa194914ea52,
+    type: 3}
   m_Color: {r: 1, g: 0.2216981, b: 0.2216981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -345,6 +347,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
   ColorIndex: 1
+--- !u!95 &179625149
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179625144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0afd24b913848347bec55e82861457f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &558768554
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +447,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &679713481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430205029311722988, guid: c7868ad73a5b0a94b887008dfcac820d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200122134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &679713482
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679713481}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0afd24b913848347bec55e82861457f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &730087395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,6 +1180,7 @@ GameObject:
   - component: {fileID: 1078817922}
   - component: {fileID: 1078817921}
   - component: {fileID: 1078817920}
+  - component: {fileID: 1078817924}
   m_Layer: 0
   m_Name: Red (1)
   m_TagString: Obstacle
@@ -1172,7 +1219,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.62, y: 5.78}
+    oldSize: {x: 15.323985, y: 3.65}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1220,7 +1267,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6b13e552aa3ef1499e1bf605c95b6fc, type: 3}
+  m_Sprite: {fileID: -7698801141481191845, guid: ddc9d4e542ff25d4883cfa194914ea52,
+    type: 3}
   m_Color: {r: 1, g: 0.2216981, b: 0.2216981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1245,6 +1293,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1078817924
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078817919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0afd24b913848347bec55e82861457f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1200122134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,6 +1394,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7484934892436292834, guid: c7868ad73a5b0a94b887008dfcac820d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7698801141481191845, guid: ddc9d4e542ff25d4883cfa194914ea52,
+        type: 3}
     - target: {fileID: 8478595701651025693, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: color.r

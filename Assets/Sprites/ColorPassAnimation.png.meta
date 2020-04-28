@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: ddc9d4e542ff25d4883cfa194914ea52
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7698801141481191845
+    second: ColorPassAnimation_0
+  - first:
+      213: -4627024267141280884
+    second: ColorPassAnimation_1
+  - first:
+      213: 5697335719916183652
+    second: ColorPassAnimation_2
+  - first:
+      213: -4250445914720409934
+    second: ColorPassAnimation_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,7 +120,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ColorPassAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1840
+        width: 1532
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5644add62d582590800000000000000
+      internalID: -7698801141481191845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColorPassAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1262
+        width: 1532
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b8eeda1f189cfb0800000000000000
+      internalID: -4627024267141280884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColorPassAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 684
+        width: 1532
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460afb7c6a0011f40800000000000000
+      internalID: 5697335719916183652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColorPassAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 106
+        width: 1532
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6641cd5f16305c0800000000000000
+      internalID: -4250445914720409934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
