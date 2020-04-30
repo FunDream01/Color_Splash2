@@ -22,7 +22,7 @@ RenderSettings:
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 1, g: 0.8627451, b: 0.8627451, a: 1}
   m_AmbientEquatorColor: {r: 0.8820755, g: 0.9292453, b: 1, a: 1}
-  m_AmbientGroundColor: {r: 0, g: 0.18928123, b: 1, a: 1}
+  m_AmbientGroundColor: {r: 0.48408604, g: 0, b: 1, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -205,15 +205,15 @@ MonoBehaviour:
   - serializedVersion: 2
     rgba: 16777215
   - serializedVersion: 2
-    rgba: 255
+    rgba: 16711903
   - serializedVersion: 2
     rgba: 16711680
   - serializedVersion: 2
-    rgba: 16711774
+    rgba: 3145983
   - serializedVersion: 2
     rgba: 12779775
   GameMaterial: {fileID: 2100000, guid: 725c6ee260c175d4dbb1d4f4ac4da1d2, type: 2}
-  WinColor: 2
+  WinColor: 1
   WinScreen: {fileID: 1008670010}
   LoseScreen: {fileID: 35914732}
 --- !u!1 &35914732 stripped
@@ -1358,7 +1358,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d9684b27c6cb33b469fdaf5bccf64363, type: 3}
-  m_Color: {r: 0.5424528, g: 0.7496565, b: 1, a: 1}
+  m_Color: {r: 0.7166827, g: 0.5411765, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1475,7 +1475,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 0, z: 8.48e-43, w: 2.5453e-41}
+  m_BoundingSphereOverride: {x: 5.05e-42, y: 0, z: 8.48e-43, w: 2.5476e-41}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1553,7 +1553,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6.0517324e-10, z: 8.46e-43, w: 0}
+  m_BoundingSphereOverride: {x: 5.503e-42, y: 1.04e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2212,6 +2212,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8543135211196851777, guid: c7868ad73a5b0a94b887008dfcac820d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543135211196851777, guid: c7868ad73a5b0a94b887008dfcac820d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543135211196851777, guid: c7868ad73a5b0a94b887008dfcac820d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851779, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_Name
@@ -2225,12 +2240,12 @@ PrefabInstance:
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.18
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
@@ -2240,22 +2255,22 @@ PrefabInstance:
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.2051365
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.97873336
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
@@ -2275,22 +2290,27 @@ PrefabInstance:
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 23.675001
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.16809002
+      value: 0.11461369
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.16809002
+      value: 0.11461369
       objectReference: {fileID: 0}
     - target: {fileID: 8543135211196851782, guid: c7868ad73a5b0a94b887008dfcac820d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.16809002
+      value: 0.11461369
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543135211196851783, guid: c7868ad73a5b0a94b887008dfcac820d,
+        type: 3}
+      propertyPath: ColorIndex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7868ad73a5b0a94b887008dfcac820d, type: 3}

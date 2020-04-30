@@ -80,10 +80,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _1Color: {r: 1, g: 1, b: 1, a: 0}
-    - _2Color: {r: 1, g: 0, b: 0, a: 0}
-    - _3Color: {r: 0, g: 0, b: 1, a: 0}
-    - _4Color: {r: 0.36862746, g: 0, b: 1, a: 0}
-    - _5Color: {r: 1, g: 0, b: 0.7647059, a: 0}
+    - _2Color: {r: 0, g: 0.11372549, b: 1, a: 0}
+    - _3Color: {r: 1, g: 0.007843138, b: 0, a: 0}
+    - _4Color: {r: 1, g: 0.20392157, b: 0.9254902, a: 0}
+    - _5Color: {r: 0.83137256, g: 0, b: 1, a: 0}
     - _6Color: {r: 1, g: 0, b: 1, a: 0}
     - _7Color: {r: 0, g: 1, b: 1, a: 0}
     - _8Color: {r: 0, g: 0, b: 0, a: 0}
