@@ -8,6 +8,8 @@ TagManager:
   - Mixture
   - Particle
   - Obstacle
+  - UICanvas
+  - level indicator
   layers:
   - Default
   - TransparentFX

@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816bfa25839635d439c5e3f904755cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndicator: {fileID: 265663492}
   colors:
   - serializedVersion: 2
     rgba: 16777215
@@ -372,6 +373,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &265663492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1682500981, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5457194730301941459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &558768555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6818995647994414894, guid: 3a65bae1a30c8c5419438474fc3e9e3f,
@@ -1475,7 +1488,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 0, z: 8.48e-43, w: 2.5453e-41}
+  m_BoundingSphereOverride: {x: 0, y: 6.323129e-19, z: 6337696, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1553,7 +1566,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6.0517324e-10, z: 8.46e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.57e-43, z: 0, w: 1.57e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1645,7 +1658,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.46e-43, y: 0.000000001517205, z: 8.46e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1925,71 +1938,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5457194730125748755, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194730125748844, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.5471698
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194730125748844, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.5155883
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194730125748844, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.48264506
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194730125748844, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194730125748844, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498928, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498929, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498929, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498929, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: far clip plane
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498935, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: iterations
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498935, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457194731599498935, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: blurSpread
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8256481725842707227, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
         type: 3}
       propertyPath: m_Name
@@ -2077,6 +2025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983007001947938176, guid: 817f6cf03edb9c54c968485c276a5156,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7983007001947938188, guid: 817f6cf03edb9c54c968485c276a5156,
         type: 3}
