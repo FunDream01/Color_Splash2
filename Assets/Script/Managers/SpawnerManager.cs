@@ -30,7 +30,10 @@ public class SpawnerManager : MonoBehaviour
             GameObject gameObject= Instantiate(ball, spawner.position, Quaternion.identity);   //we use this to spawn balls(game object,position , rotation)  Quaternion.identity means rotation =0
             gameObject.GetComponent<SpriteRenderer>().color=IntToColor.switchColor(0);
             NumberOfBalls--;
-            yield return new WaitForSeconds(delay);                     //we have to have this to make (IEnumerator spawning()) works and we added delay to the spawning balls
+            yield return new WaitForSeconds(delay);                     //we have to have this to make (IEnumerator spawning()) works and we added delay to the spawning balls;
+            if (NumberOfBalls==0){
+                this.SendMessage("Lose");
+            }
 
         }
     }
