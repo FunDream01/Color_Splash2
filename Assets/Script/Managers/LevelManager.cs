@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    public Text levelIndicator;
+    public TextMeshProUGUI levelIndicator;
     public Color32 [] colors;
     public Material GameMaterial;
     public static LevelManager instant;
@@ -19,7 +20,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
-        levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<Text>();
+        levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
         levelIndicator.text= "Level "+ PlayerLevel;
         instant=this;
         ColorShader();
