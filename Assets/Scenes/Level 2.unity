@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816bfa25839635d439c5e3f904755cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndicator: {fileID: 0}
   colors:
   - serializedVersion: 2
     rgba: 16777215
@@ -1475,7 +1476,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.05e-42, y: 0, z: 8.48e-43, w: 2.5476e-41}
+  m_BoundingSphereOverride: {x: 0, y: 4.2e-44, z: 2.835e-42, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

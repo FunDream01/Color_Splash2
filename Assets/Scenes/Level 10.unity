@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 9215575143632995489, guid: ef1852cc5abff9c4e8d15472223f865d, type: 3}
   spawner: {fileID: 558768555}
-  NumberOfBalls: 100
+  NumberOfBalls: 40
   startSpawning: 0
   delay: 0.05
 --- !u!4 &20983990
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816bfa25839635d439c5e3f904755cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndicator: {fileID: 0}
   colors:
   - serializedVersion: 2
     rgba: 16777215
@@ -1599,7 +1600,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: -0, w: 2.6103e-41}
+  m_BoundingSphereOverride: {x: 0, y: 2.1e-44, z: 2.768e-42, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
