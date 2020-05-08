@@ -884,6 +884,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Loss_Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 110321334911481245, guid: 0bb5a79083e177b41b8536227137029a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bb5a79083e177b41b8536227137029a, type: 3}
 --- !u!1 &850591733
@@ -1681,8 +1686,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.7019774e-38, y: 2.7105054e-20, z: 2.3509887e-38,
-    w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
