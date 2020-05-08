@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     {
         PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
         levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
+        GameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
         levelIndicator.text= "Level "+ PlayerLevel;
         instant=this;
         ColorShader();
@@ -38,7 +39,7 @@ public class LevelManager : MonoBehaviour
         GameMaterial.SetColor("_5Color", colors[4]); // Black
     }
     public void Win(){
-        
+        Debug.Log("Win");
         if (PlayerLevel+1>11){
             PlayerPrefs.SetInt("PlayerLevel", 1);
         }else{
@@ -49,12 +50,14 @@ public class LevelManager : MonoBehaviour
         WinScreen.SetActive(true);
     }
     public void Lose(){
+        
+        Debug.Log("Lose");
         FinishGamePlay();
         LoseScreen.SetActive(true);
     }
     void FinishGamePlay(){
         FindObjectOfType<DrawLine>().enabled=false;
-        GameObject.FindGameObjectWithTag(Tags.UI).SetActive(false);
+        GameObject.FindGameObjectWithTag(Tags.UI).gameObject.SetActive(false);
     }
     public void RestartScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

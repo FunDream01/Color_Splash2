@@ -6,4 +6,6 @@ public class Tags
     public static string Finish ="Finish";
     public static string UI ="UICanvas";
     public static string indicator ="level indicator";
+    public static string Resrart ="Resrart";
+    //Resrart
 }
