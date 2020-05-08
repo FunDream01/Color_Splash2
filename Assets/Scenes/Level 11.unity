@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816bfa25839635d439c5e3f904755cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndicator: {fileID: 0}
   colors:
   - serializedVersion: 2
     rgba: 16777215
@@ -216,6 +217,8 @@ MonoBehaviour:
   WinColor: 4
   WinScreen: {fileID: 1008670010}
   LoseScreen: {fileID: 35914732}
+  analyticsPrefab: {fileID: 8891076220722010131, guid: a97a9da61a14c06488976964e23cb523,
+    type: 3}
 --- !u!1 &35914732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 110321334911481245, guid: 0bb5a79083e177b41b8536227137029a,
@@ -1353,6 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46721f069c714744b905d077bf9bad12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinColor: 0
   WinPartical: 0
   NumberOfParticalToWin: 20
   ElsePartical: 0
@@ -1584,7 +1588,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.01e-43, z: -Infinity, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1662,7 +1666,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0, z: -0, w: 0.16363664}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 9.1835e-41, w: 9e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1754,7 +1758,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.46e-43, y: 4.8803583e-10, z: 8.46e-43, w: 0}
+  m_BoundingSphereOverride: {x: 5.44e-43, y: -1.131778e+10, z: 5.42e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2009,6 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46721f069c714744b905d077bf9bad12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinColor: 0
   WinPartical: 0
   NumberOfParticalToWin: 0
   ElsePartical: 0

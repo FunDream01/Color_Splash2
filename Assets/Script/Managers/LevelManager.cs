@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     public GameObject WinScreen;
     public GameObject LoseScreen;
     Analytics analytics;
-    
+    public GameObject analyticsPrefab;
     int PlayerLevel;
     int Level;
     
@@ -37,7 +37,11 @@ public class LevelManager : MonoBehaviour
 
         ColorShader();
         analytics = FindObjectOfType<Analytics>();
-        
+        if(analytics == null)
+        {
+            Instantiate(analyticsPrefab);
+            analytics = analyticsPrefab.GetComponent<Analytics>();
+        }
         StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,PlayerLevel));
         //ameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
     }
