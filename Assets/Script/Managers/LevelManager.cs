@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     public int WinColor;
     public GameObject WinScreen;
     public GameObject LoseScreen;
+    Analytics analytics;
     
     int PlayerLevel;
     int Level;
@@ -33,7 +34,11 @@ public class LevelManager : MonoBehaviour
         levelIndicator.text= "Level "+ (Level+1);
         PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
         instant=this;
+
         ColorShader();
+        analytics = FindObjectOfType<Analytics>();
+        
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,PlayerLevel));
         //ameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
     }
     void Update()
@@ -54,6 +59,7 @@ public class LevelManager : MonoBehaviour
         Level++;
         PlayerPrefs.SetInt("Level",Level);
 
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelSucceeded ,PlayerLevel));
         if (PlayerLevel+1>20){
             PlayerPrefs.SetInt("PlayerLevel", 1);
         }else{
@@ -65,6 +71,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Lose(){
         
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelFailed ,PlayerLevel));
         Debug.Log("Lose");
         FinishGamePlay();
         LoseScreen.SetActive(true);
