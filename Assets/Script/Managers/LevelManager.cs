@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("PlayerLevel", 1);
+            PlayerPrefs.SetInt("Level", 1);
         }
         Level = PlayerPrefs.GetInt("Level");
         levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
@@ -42,7 +42,8 @@ public class LevelManager : MonoBehaviour
             Instantiate(analyticsPrefab);
             analytics = analyticsPrefab.GetComponent<Analytics>();
         }
-        StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,PlayerLevel));
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,SceneManager.GetActiveScene().buildIndex));
+        
         //ameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
     }
     void Update()
@@ -63,7 +64,7 @@ public class LevelManager : MonoBehaviour
         Level++;
         PlayerPrefs.SetInt("Level",Level);
 
-        StartCoroutine(analytics.waitToCall(analytics.LogLevelSucceeded ,PlayerLevel));
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelSucceeded ,SceneManager.GetActiveScene().buildIndex));
         if (PlayerLevel+1>20){
             PlayerPrefs.SetInt("PlayerLevel", 1);
         }else{
@@ -75,7 +76,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Lose(){
         
-        StartCoroutine(analytics.waitToCall(analytics.LogLevelFailed ,PlayerLevel));
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelFailed ,SceneManager.GetActiveScene().buildIndex));
         Debug.Log("Lose");
         FinishGamePlay();
         LoseScreen.SetActive(true);
