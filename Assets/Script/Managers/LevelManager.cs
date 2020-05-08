@@ -16,15 +16,25 @@ public class LevelManager : MonoBehaviour
     public GameObject LoseScreen;
     
     int PlayerLevel;
+    int Level;
     
     void Start()
     {
-        PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
+        if (PlayerPrefs.HasKey("Level"))
+        {
+            Level = PlayerPrefs.GetInt("Level");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("PlayerLevel", 1);
+        }
+        Level = PlayerPrefs.GetInt("Level");
         levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
-        GameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
-        levelIndicator.text= "Level "+ PlayerLevel;
+        levelIndicator.text= "Level "+ (Level+1);
+        PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
         instant=this;
         ColorShader();
+        //ameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
     }
     void Update()
     {
@@ -40,7 +50,11 @@ public class LevelManager : MonoBehaviour
     }
     public void Win(){
         Debug.Log("Win");
-        if (PlayerLevel+1>11){
+        Level = PlayerPrefs.GetInt("Level");
+        Level++;
+        PlayerPrefs.SetInt("Level",Level);
+
+        if (PlayerLevel+1>20){
             PlayerPrefs.SetInt("PlayerLevel", 1);
         }else{
             PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);
@@ -57,7 +71,7 @@ public class LevelManager : MonoBehaviour
     }
     void FinishGamePlay(){
         FindObjectOfType<DrawLine>().enabled=false;
-        GameObject.FindGameObjectWithTag(Tags.UI).gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag(Tags.UI).SetActive(false);
     }
     public void RestartScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

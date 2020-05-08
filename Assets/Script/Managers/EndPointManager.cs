@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndPointManager : MonoBehaviour
 {
-    private int WinColor;
+    public int WinColor;
     public int WinPartical;
     public int NumberOfParticalToWin;
     public int ElsePartical;

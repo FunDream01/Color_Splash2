@@ -8,10 +8,11 @@ public class LodeScene : MonoBehaviour
     public int PlayerLevel;
     void Start()
     {
-         if (PlayerPrefs.HasKey("PlayerLevel"))
+        //PlayerPrefs.DeleteAll();
+        if (PlayerPrefs.HasKey("PlayerLevel"))
         {
             PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
-            if (PlayerLevel >= 11)
+            if (PlayerLevel > 20)
             {
                 PlayerPrefs.SetInt("PlayerLevel", 1);
             }

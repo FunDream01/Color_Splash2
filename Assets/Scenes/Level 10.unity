@@ -214,7 +214,7 @@ MonoBehaviour:
   - serializedVersion: 2
     rgba: 13566207
   GameMaterial: {fileID: 2100000, guid: 725c6ee260c175d4dbb1d4f4ac4da1d2, type: 2}
-  WinColor: 4
+  WinColor: 3
   WinScreen: {fileID: 1008670010}
   LoseScreen: {fileID: 35914732}
 --- !u!1 &35914732 stripped
@@ -1369,6 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46721f069c714744b905d077bf9bad12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinColor: 0
   WinPartical: 0
   NumberOfParticalToWin: 20
   ElsePartical: 0
@@ -1600,7 +1601,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3e-45, z: 5.758e-42, w: 1.04e-43}
+  m_BoundingSphereOverride: {x: -2.3404263e-24, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1678,7 +1679,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.48e-43, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1770,7 +1771,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.1e-44, y: 3.6e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -2.3404263e-24, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1916,6 +1917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46721f069c714744b905d077bf9bad12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinColor: 0
   WinPartical: 20
   NumberOfParticalToWin: 0
   ElsePartical: 0
