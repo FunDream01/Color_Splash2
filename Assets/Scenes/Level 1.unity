@@ -797,37 +797,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 110321335247260686, guid: 0bb5a79083e177b41b8536227137029a,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 110321335247260686, guid: 0bb5a79083e177b41b8536227137029a,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 110321335247260686, guid: 0bb5a79083e177b41b8536227137029a,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 29.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 110321335247260686, guid: 0bb5a79083e177b41b8536227137029a,
-        type: 3}
-      propertyPath: m_fontSizeMin
-      value: 29.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 110321335247260686, guid: 0bb5a79083e177b41b8536227137029a,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 110321335247260686, guid: 0bb5a79083e177b41b8536227137029a,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bb5a79083e177b41b8536227137029a, type: 3}
 --- !u!1 &850591733
@@ -1626,7 +1595,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3.234e-42, y: 1.04e-43, z: 5.92e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2173,11 +2142,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 779900360848574885, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 19
-      objectReference: {fileID: 0}
     - target: {fileID: 919171376310936675, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2206,7 +2170,12 @@ PrefabInstance:
     - target: {fileID: 919171376310936675, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 120.3
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 919171376310936675, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1442988137706688550, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
         type: 3}
@@ -2330,6 +2299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983007001947938176, guid: 817f6cf03edb9c54c968485c276a5156,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7983007001947938188, guid: 817f6cf03edb9c54c968485c276a5156,
         type: 3}
