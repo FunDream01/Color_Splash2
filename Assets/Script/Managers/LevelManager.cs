@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
     public GameObject analyticsPrefab;
     int PlayerLevel;
     int Level;
-    
+    bool DidLose;
     void Start()
     {
         if (PlayerPrefs.HasKey("Level"))
@@ -60,23 +60,25 @@ public class LevelManager : MonoBehaviour
         GameMaterial.SetColor("_5Color", colors[4]); // Black
     }
     public void Win(){
-        Debug.Log("Win");
-        Level = PlayerPrefs.GetInt("Level");
-        Level++;
-        PlayerPrefs.SetInt("Level",Level);
+        if (!DidLose){
+            Debug.Log("Win");
+            Level = PlayerPrefs.GetInt("Level");
+            Level++;
+            PlayerPrefs.SetInt("Level",Level);
 
-        analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex);
-        if (PlayerLevel+1>20){
-            PlayerPrefs.SetInt("PlayerLevel", 1);
-        }else{
-            PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);
+            analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex);
+            if (PlayerLevel+1>20){
+                PlayerPrefs.SetInt("PlayerLevel", 1);
+            }else{
+                PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);
+            }
+            PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
+            FinishGamePlay();
+            WinScreen.SetActive(true);
         }
-        PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
-        FinishGamePlay();
-        WinScreen.SetActive(true);
     }
     public void Lose(){
-        
+        DidLose=true;
         analytics.LogLevelFailed(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Lose");
         FinishGamePlay();
