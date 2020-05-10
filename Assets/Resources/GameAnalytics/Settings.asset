@@ -46,7 +46,7 @@ MonoBehaviour:
   SelectedPlatformGameID: cc8a0100cd8a0100
   SelectedOrganization: 0200000002000000
   SelectedStudio: 0100000001000000
-  SelectedGame: 020000000a000000
+  SelectedGame: 020000000d000000
   NewVersion: 
   Changes: 
   SignUpOpen: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
   PlatformFoldOut: 0101
-  CustomDimensions01FoldOut: 0
+  CustomDimensions01FoldOut: 1
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0
   ResourceItemTypesFoldOut: 0
