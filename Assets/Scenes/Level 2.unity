@@ -201,6 +201,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816bfa25839635d439c5e3f904755cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Recipes:
+  - serializedVersion: 2
+    rgba: 0
+  - serializedVersion: 2
+    rgba: 0
+  - serializedVersion: 2
+    rgba: 0
+  - serializedVersion: 2
+    rgba: 0
+  - serializedVersion: 2
+    rgba: 0
   levelIndicator: {fileID: 1394632016}
   colors:
   - serializedVersion: 2
@@ -1491,7 +1502,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.577e-42, y: 1.01e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.2e-43, y: -3.0538082, z: 7.2e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1569,7 +1580,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.01e-43, z: -Infinity, w: 0}
+  m_BoundingSphereOverride: {x: 7.2e-43, y: NaN, z: 7.22e-43, w: -0.0000048508227}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1661,7 +1672,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.01e-43, z: 5.44e-43, w: 0}
+  m_BoundingSphereOverride: {x: 7.2e-43, y: NaN, z: 7.22e-43, w: -0.000004845482}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

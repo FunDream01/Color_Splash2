@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Particle : MonoBehaviour
 {
-    public Color32 color;
+    public Color color;
     public int ColorIndex = 0 ;
     private SpriteRenderer spriteRenderer;
     void Start()
@@ -19,11 +19,15 @@ public class Particle : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag(Tags.Obstacle)){
             int ObstacleIndex = other.GetComponent<ColorizingObstacle>().ColorIndex;
-            if (Mixer.ColorIndex(ObstacleIndex,ColorIndex)!=0){
+            if (Mixer.ColorIndex(ObstacleIndex,ColorIndex)!=100){
+                
                 ColorIndex=Mixer.ColorIndex(ObstacleIndex,ColorIndex);
-                color = IntToColor.switchColor(ColorIndex);
-
+                color = LevelManager.instant.colors[ColorIndex].Color;
+                
+                color.a=1;
                 spriteRenderer.color=color;
+            }else{
+                
             }
         }
     }

@@ -7,20 +7,22 @@ using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
+    public OurColor[] colors;
     public TextMeshProUGUI levelIndicator;
-    public Color32 [] colors;
-    public Material GameMaterial;
     public static LevelManager instant;
-    public int WinColor;
     public GameObject WinScreen;
     public GameObject LoseScreen;
     Analytics analytics;
     public GameObject analyticsPrefab;
+    EndPointManager[] managers;
     int PlayerLevel;
     int Level;
-    bool DidLose;
+    public bool Finish;
+    public bool DidWin;
     void Start()
     {
+        managers=FindObjectsOfType<EndPointManager>();
+
         if (PlayerPrefs.HasKey("Level"))
         {
             Level = PlayerPrefs.GetInt("Level");
@@ -31,11 +33,11 @@ public class LevelManager : MonoBehaviour
         }
         Level = PlayerPrefs.GetInt("Level");
         levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
-        levelIndicator.text= "Level "+ (Level+1);
+        levelIndicator.text= "Level "+ Level;
+
         PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
         instant=this;
 
-        ColorShader();
         analytics = FindObjectOfType<Analytics>();
         if(analytics == null)
         {
@@ -45,22 +47,39 @@ public class LevelManager : MonoBehaviour
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
         StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,SceneManager.GetActiveScene().buildIndex));
         
-        //ameObject.FindGameObjectWithTag(Tags.Resrart).GetComponent<Button>().onClick.AddListener(delegate{RestartScene();});
     }
     void Update()
     {
         
     }
-    public void ColorShader(){
+    public void CheckEndPoints(){
+        Finish =true;
+        DidWin=true;
+
+        foreach(EndPointManager end in managers){
+            if (end.State==1){
+                DidWin=false;
+                //Finish =false;
+                Lose();
+                break;
+            }
+        }
+        if (DidWin==true){
+
+            foreach(EndPointManager end in managers){
+                if (end.State==0){
+                    Finish=false;
+                    break;
+                }
+            }
+
+            if (Finish==true){
+                Win();
+            }
+        }
         
-        GameMaterial.SetColor("_1Color", colors[0]); // while 
-        GameMaterial.SetColor("_2Color", colors[1]); // Red 
-        GameMaterial.SetColor("_3Color", colors[2]); // Blue
-        GameMaterial.SetColor("_4Color", colors[3]); // Green
-        GameMaterial.SetColor("_5Color", colors[4]); // Black
     }
     public void Win(){
-        if (!DidLose){
             Debug.Log("Win");
             Level = PlayerPrefs.GetInt("Level");
             Level++;
@@ -75,10 +94,8 @@ public class LevelManager : MonoBehaviour
             PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
             FinishGamePlay();
             WinScreen.SetActive(true);
-        }
     }
     public void Lose(){
-        DidLose=true;
         analytics.LogLevelFailed(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Lose");
         FinishGamePlay();
@@ -93,4 +110,9 @@ public class LevelManager : MonoBehaviour
     }public void NextLevel(){
         SceneManager.LoadScene(PlayerLevel);
     }
+}
+[System.Serializable]
+public class OurColor{
+    public string name;
+    public Color Color;
 }
