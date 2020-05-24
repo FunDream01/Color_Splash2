@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 171188930489879930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.67, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.57
+  m_Radius: 1.434127
 --- !u!50 &203277875188684106
 Rigidbody2D:
   serializedVersion: 4
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &4593827688800783917
 MonoBehaviour:
@@ -152,7 +152,7 @@ MonoBehaviour:
   MObject: {fileID: 171188930489879930}
   LifeTime: 6.64
   SpawnerParent: {fileID: 0}
-  witinTarget: 0
+  witinTarget: 1
   Editor_Velocity: {x: 0, y: 0}
   Velocity_Limiter_X: {x: 0, y: 0}
   Velocity_Limiter_Y: {x: 0, y: 0}
@@ -178,7 +178,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a7246e2a09774d48a7f3b697316e632, type: 2}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -199,25 +199,16 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.087
+  m_Time: 2
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.42
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.52380955
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.4047619
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -260,8 +251,8 @@ TrailRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 0
-    shadowBias: 0
+    shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.0001
+  m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
