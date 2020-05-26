@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndPointManager : MonoBehaviour
 {
-    public int WinColor;
+    public COLOR_CODE WinColor;
     public int WinPartical;
     public int NumberOfParticalToWin;
     public int ElsePartical;
@@ -28,7 +28,7 @@ public class EndPointManager : MonoBehaviour
         
         if (other.CompareTag(Tags.Particle)){
             Particle particle=other.GetComponent<Particle>();
-            if (particle.ColorIndex==WinColor-1){
+            if (particle.ColorIndex==WinColor){
                 WinPartical++;
                 if (WinPartical==NumberOfParticalToWin){
                     State=2;

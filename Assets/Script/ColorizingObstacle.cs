@@ -21,14 +21,16 @@ public class ColorizingObstacle : MonoBehaviour
     }
     public void Color(){ 
 
-        LevelManager manager = FindObjectOfType<LevelManager>();
-        color.a =0;
-        if (manager.colors[ColorIndex].Color==color){
-            if (ColorIndex>=manager.colors.Length-1) ColorIndex = 0;
+         color.a =0;
+         LevelManager lm = FindObjectOfType<LevelManager>();
+        if (lm.colors[ColorIndex].Color==color){
+            if (ColorIndex>=lm.colors.Length-1) ColorIndex = 0;
             else  ColorIndex++;
         }
-        color = manager.colors[ColorIndex].Color;
+        color = lm.colors[ColorIndex].Color;
         color.a=1;
+        
+
         // switch color 
         GetComponent<SpriteRenderer>().color = color;
     }

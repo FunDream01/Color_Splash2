@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 0}
-  ColorIndex: -1
+  ColorIndex: 0
 --- !u!114 &285917917779736682
 MonoBehaviour:
   m_ObjectHideFlags: 0
