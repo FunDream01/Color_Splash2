@@ -6,6 +6,7 @@ public class DrawLine : MonoBehaviour
 {
     public GameObject linePrefab;
     public GameObject currentLine;
+    public GameObject parent;
 
     [HideInInspector]
     public LineRenderer lineRenderer;
@@ -43,6 +44,7 @@ public class DrawLine : MonoBehaviour
         lineRenderer.SetPosition(0, fingerPositions[0]);
         lineRenderer.SetPosition(1, fingerPositions[1]);
         edgeCollider.points = fingerPositions.ToArray();
+        currentLine.transform.parent=parent.transform;
     }
 
 
@@ -52,7 +54,14 @@ public class DrawLine : MonoBehaviour
         lineRenderer.positionCount++;
         lineRenderer.SetPosition(lineRenderer.positionCount - 1, newFingerPos);
         edgeCollider.points = fingerPositions.ToArray();
+        currentLine.transform.parent=parent.transform;
 
+    }
+    public void ClearLines(){
+        foreach (Transform child in parent.transform) 
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
 
