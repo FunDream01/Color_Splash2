@@ -21,9 +21,11 @@ public class SpawnerManager : MonoBehaviour
                 StartCoroutine(spawning1()); 
             break;
             case 1 :
+                Angle=0;
                 StartCoroutine(spawning2()); 
             break;
             case 2 :
+                Angle=0;
                 StartCoroutine(spawning3());
             break;
         }              
@@ -51,25 +53,22 @@ public class SpawnerManager : MonoBehaviour
     {   
         while (startSpawning) 
         {
-            if (Angle<0&&Angle>-90){
+            if (Angle>-90)
                 Angle=Angle-0.1f;
-                yield return new WaitForSeconds(delay);   
-            }
+
+            yield return new WaitForSeconds(delay);   
             spawner2.Rotate( new Vector3( 0, 0, Angle) );
         }
     }
     IEnumerator spawning3()
     {
-        while (startSpawning&&NumberOfBalls>0) 
+        while (startSpawning) 
         {
-            GameObject gameObject= Instantiate(ball, spawner.position, Quaternion.identity);   //we use this to spawn balls(game object,position , rotation)  Quaternion.identity means rotation =0
-            gameObject.GetComponent<SpriteRenderer>().color=Color.white;
-            NumberOfBalls--;
-            yield return new WaitForSeconds(delay);                     //we have to have this to make (IEnumerator spawning()) works and we added delay to the spawning balls;
-            if (NumberOfBalls==0){
-                //this.SendMessage("Lose");
-            }
+            if (Angle>-90)
+                Angle=Angle-0.1f;
+
+            yield return new WaitForSeconds(delay);   
+            spawner3.Rotate( new Vector3( 0, 0, Angle) );
         }
     }
-
 }
