@@ -10,6 +10,7 @@ public class SpawnerManager : MonoBehaviour
     public bool startSpawning;
     public float delay = 0.1f;
     float Angle = 0; 
+    Vector2 ContainerPosition; 
     public Transform spawner2;
     public Transform spawner3;
     //to start spawning
@@ -22,15 +23,17 @@ public class SpawnerManager : MonoBehaviour
             break;
             case 1 :
                 Angle=0;
+                ContainerPosition=spawner2.transform.position;
                 StartCoroutine(spawning2()); 
             break;
             case 2 :
                 Angle=0;
+                ContainerPosition=spawner3.transform.position;
                 StartCoroutine(spawning3());
             break;
         }              
     }                                             
-    public void stopSpawningbutton()              //
+    public void stopSpawningbutton()          
     {
         startSpawning = false;                    // we have this to stop the loop
                                                   // then from unity we add them to Trigger-event 
@@ -53,22 +56,28 @@ public class SpawnerManager : MonoBehaviour
     {   
         while (startSpawning) 
         {
+            /*
             if (Angle>-90)
                 Angle=Angle-0.1f;
-
+            */
+            ContainerPosition.x +=0.1f;
             yield return new WaitForSeconds(delay);   
-            spawner2.Rotate( new Vector3( 0, 0, Angle) );
+            spawner2.position = ContainerPosition;
+            //spawner2.Rotate( new Vector3( 0, 0, Angle) );
         }
     }
     IEnumerator spawning3()
     {
         while (startSpawning) 
         {
+            /*
             if (Angle>-90)
                 Angle=Angle-0.1f;
-
+            */  
+            ContainerPosition.x +=0.1f;
             yield return new WaitForSeconds(delay);   
-            spawner3.Rotate( new Vector3( 0, 0, Angle) );
+            spawner3.position = ContainerPosition; 
+            //spawner3.Rotate( new Vector3( 0, 0, Angle) );
         }
     }
 }

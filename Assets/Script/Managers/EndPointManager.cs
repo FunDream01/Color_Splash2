@@ -12,6 +12,8 @@ public class EndPointManager : MonoBehaviour
     public bool Filled;
     public bool Win;
     public int State=0; 
+    public SpriteRenderer Colored;
+    public Color32 spcolor;
 
     void Start()
     {
@@ -25,13 +27,15 @@ public class EndPointManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (other.CompareTag(Tags.Particle)){
+        if (other.CompareTag(Tags.Particle)&&StepsManager.Instance.Step==2){
+
+            Destroy(other.gameObject);
             Particle particle=other.GetComponent<Particle>();
+
             if (particle.ColorIndex==WinColor){
                 WinPartical++;
+                FillWinColor();
                 if (WinPartical==NumberOfParticalToWin){
-
                     State=2;
                     Filled=true;
                     Win=true;
@@ -50,6 +54,12 @@ public class EndPointManager : MonoBehaviour
         }
     }
     void FillWinColor(){
-
+        spcolor = Colored.color;
+        if (spcolor.a>230){
+            spcolor.a=255;
+        }else{ 
+            spcolor.a+=10;
+        }
+        Colored.color = spcolor;
     }
 }
