@@ -31,6 +31,7 @@ public class EndPointManager : MonoBehaviour
             if (particle.ColorIndex==WinColor){
                 WinPartical++;
                 if (WinPartical==NumberOfParticalToWin){
+
                     State=2;
                     Filled=true;
                     Win=true;
@@ -47,5 +48,8 @@ public class EndPointManager : MonoBehaviour
                 }
             }
         }
+    }
+    void FillWinColor(){
+
     }
 }
