@@ -123,6 +123,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2402194521364284385, guid: be4b7650b24faab41a13dd46268f65e5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402194521364284385, guid: be4b7650b24faab41a13dd46268f65e5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4787736
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402194521364284385, guid: be4b7650b24faab41a13dd46268f65e5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4787736
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402194521364284385, guid: be4b7650b24faab41a13dd46268f65e5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.18431373
+      objectReference: {fileID: 0}
     - target: {fileID: 2402194521364284386, guid: be4b7650b24faab41a13dd46268f65e5,
         type: 3}
       propertyPath: m_Name

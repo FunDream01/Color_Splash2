@@ -1603,7 +1603,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.958e-42, y: 1.04e-43, z: 7.99e-43, w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: NaN, z: 0, w: 2.0399912e-28}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2054,6 +2054,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 919171376310936675, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c3c151a953393f24489b6fc6300fdebe,
+        type: 2}
+    - target: {fileID: 919171376310936675, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5087892992982941600, guid: c3c151a953393f24489b6fc6300fdebe,
+        type: 2}
     - target: {fileID: 5457194730125748755, guid: 0fd4711c4d3c19d4a8f9ccbf8bf8bccc,
         type: 3}
       propertyPath: m_LocalPosition.z
