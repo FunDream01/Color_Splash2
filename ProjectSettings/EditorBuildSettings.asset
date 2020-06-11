@@ -9,63 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 81925a8c88f94814296382f308dc94c2
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 1c7c1677f2f2463409bd8f312c530116
-  - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: 8cc0afb9bfd47c34e880d6fc3e6044f1
-  - enabled: 1
-    path: Assets/Scenes/Level 3.unity
-    guid: e6c4beeb0990e424fa3d2ef5cf1612d6
-  - enabled: 1
-    path: Assets/Scenes/Level 4.unity
-    guid: daef27a092a745a41bc586da25106803
-  - enabled: 1
-    path: Assets/Scenes/Level 5.unity
-    guid: c76fa341112e16f49baf9faaeb7a8ec9
-  - enabled: 1
-    path: Assets/Scenes/Level 6.unity
-    guid: af48ef2d8e3d62640acadc2d12a3bb8f
-  - enabled: 1
-    path: Assets/Scenes/Level 7.unity
-    guid: 50d522e27a322eb4d8373c0ce4c5f90a
-  - enabled: 1
-    path: Assets/Scenes/Level 8.unity
-    guid: b8d1113de0655e440b2cc5cd07f9bf0b
-  - enabled: 1
-    path: Assets/Scenes/Level 9.unity
-    guid: 213566bc638de2748b57ae35cca5bd58
-  - enabled: 1
-    path: Assets/Scenes/Level 10.unity
-    guid: 2b0e5fd43f7fe824e81e79af0d01b89f
-  - enabled: 1
-    path: Assets/Scenes/Level 11.unity
-    guid: 11239cda5674af84ba586b8ad224d28d
-  - enabled: 1
-    path: Assets/Scenes/Level 12.unity
-    guid: 45f28b9f95cec4947a3e14f5b10e7061
-  - enabled: 1
-    path: Assets/Scenes/Level 13.unity
-    guid: f9c0dfaac929f49fd9b85b5aa07cca1f
-  - enabled: 1
-    path: Assets/Scenes/Level 14.unity
-    guid: 1b8b7287befef4321a030ed1044706b7
-  - enabled: 1
-    path: Assets/Scenes/Level 15.unity
-    guid: 017065bf00d8b4f3891a8b2c635b1f0e
-  - enabled: 1
-    path: Assets/Scenes/Level 16.unity
-    guid: 356115333f9c4461ca0b5979360f1d7f
-  - enabled: 1
-    path: Assets/Scenes/Level 17.unity
-    guid: 5a7321a17f5f042e398c7f040c44a13f
-  - enabled: 1
-    path: Assets/Scenes/Level 18.unity
-    guid: f23f49bbfca504c029c3eca40d17987a
-  - enabled: 1
-    path: Assets/Scenes/Level 19.unity
-    guid: 2cfef1d5e8c4940be9748886b52d0d41
-  - enabled: 1
     path: Assets/Scenes/Level 20.unity
-    guid: f50669954c7e0409e8f61f656a070aec
+    guid: bd0fd8c0a44bd4982b231d65922c10c0
+  - enabled: 1
+    path: Assets/Scenes/Level 21.unity
+    guid: 7a5a9cad5a71c4587b307ca78f17e2c0
+  - enabled: 1
+    path: Assets/Scenes/Level 22.unity
+    guid: e5e84a638e10b49bb9836dc1b3c64c95
+  - enabled: 1
+    path: Assets/Scenes/Level 23.unity
+    guid: b876dcc49e949467c8aa53d3691b9bbd
+  - enabled: 1
+    path: Assets/Scenes/Level 24.unity
+    guid: 0762298da43274b0cba16839bfa86daa
   m_configObjects: {}
