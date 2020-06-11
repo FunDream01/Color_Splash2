@@ -26,7 +26,7 @@ public class StepsManager : MonoBehaviour
         Vector3 pos = new Vector3(0,step*-7,-10);
         Cameras.transform.DOMove(pos,1,true).OnComplete(delegate{
             
-            FindObjectOfType<DrawLine>().ClearLines();
+            //FindObjectOfType<DrawLine>().ClearLines();
             FindObjectOfType<DrawLine>().enabled=true;
         });
 
