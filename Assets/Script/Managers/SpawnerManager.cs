@@ -6,13 +6,22 @@ public class SpawnerManager : MonoBehaviour
 {
     public GameObject ball;
     public Transform spawner;
+    public int NumberOfSteps=2;
     public int NumberOfBalls;
+    public int FinalWinBalls;
+    public int FinalLoseBalls;
     public bool startSpawning;
     public float delay = 0.1f;
     float Angle = 0; 
     Vector2 ContainerPosition; 
     public Transform spawner2;
     public Transform spawner3;
+    public int[] BallsOfSpawner;
+    public static SpawnerManager Instance;
+    void Start() {
+        Instance=this;
+    }
+
     //to start spawning
     public void SpawnButton()
     {

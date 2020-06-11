@@ -20,7 +20,7 @@ public class PartEnd : MonoBehaviour
         if (other.CompareTag(Tags.Particle))
         {
             NumberofDots++;
-            if (NumberofDots == DotsNeeded)
+            if (NumberofDots == SpawnerManager.Instance.BallsOfSpawner[NextPartIndex-1])
             {
                 StepsManager.Instance.NextStep(NextPartIndex);
                 StepsManager.Instance.Step=NextPartIndex;

@@ -5,9 +5,9 @@ using UnityEngine;
 public class EndPointManager : MonoBehaviour
 {
     public COLOR_CODE WinColor;
-    public int WinPartical;
+    private int WinPartical;
     public int NumberOfParticalToWin;
-    public int ElsePartical;
+    private int ElsePartical;
     public int NumberOfParticalToLose;
     public bool Filled;
     public bool Win;
@@ -27,7 +27,7 @@ public class EndPointManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(Tags.Particle)&&StepsManager.Instance.Step==2){
+        if (other.CompareTag(Tags.Particle)&&StepsManager.Instance.Step==SpawnerManager.Instance.NumberOfSteps){
 
             Destroy(other.gameObject);
             Particle particle=other.GetComponent<Particle>();
@@ -35,7 +35,7 @@ public class EndPointManager : MonoBehaviour
             if (particle.ColorIndex==WinColor){
                 WinPartical++;
                 FillWinColor();
-                if (WinPartical==NumberOfParticalToWin){
+                if (WinPartical==SpawnerManager.Instance.FinalWinBalls){
                     State=2;
                     Filled=true;
                     Win=true;
@@ -44,7 +44,7 @@ public class EndPointManager : MonoBehaviour
             }
             else{
                 ElsePartical++;
-                if (ElsePartical==NumberOfParticalToLose){
+                if (ElsePartical==SpawnerManager.Instance.FinalLoseBalls){
                     State=1;
                     Filled=true;
                     Win=false;
