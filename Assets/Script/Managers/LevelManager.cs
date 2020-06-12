@@ -12,15 +12,18 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instant;
     public GameObject WinScreen;
     public GameObject LoseScreen;
+    public GameObject TwoSteps;
+    public GameObject ThreeSteps;
     Analytics analytics;
     public GameObject analyticsPrefab;
     EndPointManager[] managers;
-    int PlayerLevel;
+    public int PlayerLevel;
     int Level;
     public bool Finish;
     public bool DidWin;
     void Start()
     {
+
         managers=FindObjectsOfType<EndPointManager>();
 
         if (PlayerPrefs.HasKey("Level"))
@@ -31,6 +34,7 @@ public class LevelManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level", 1);
         }
+        
         Level = PlayerPrefs.GetInt("Level");
         levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
         levelIndicator.text= "Level "+ Level;
@@ -46,6 +50,14 @@ public class LevelManager : MonoBehaviour
         }
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
         StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,SceneManager.GetActiveScene().buildIndex));
+        if (SpawnerManager.Instance.NumberOfSteps==0){
+
+        }else if (SpawnerManager.Instance.NumberOfSteps==1)
+        {
+            Instantiate(TwoSteps);
+        }else if (SpawnerManager.Instance.NumberOfSteps==2){
+            Instantiate(ThreeSteps);
+        }
         
     }
     void Update()
@@ -86,7 +98,7 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt("Level",Level);
 
             analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex);
-            if (PlayerLevel+1>20){
+            if (PlayerLevel+1>8){
                 PlayerPrefs.SetInt("PlayerLevel", 1);
             }else{
                 PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);

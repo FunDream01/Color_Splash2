@@ -48,9 +48,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 9215575143632995489, guid: ef1852cc5abff9c4e8d15472223f865d, type: 3}
   spawner: {fileID: 0}
+  NumberOfSteps: 2
   NumberOfBalls: 100
+  FinalWinBalls: 0
+  FinalLoseBalls: 0
   startSpawning: 0
   delay: 0.05
+  DropButtonActivate: 2
+  spawner2: {fileID: 0}
+  spawner3: {fileID: 0}
+  BallsOfSpawner: 
 --- !u!114 &2862110122207514910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +73,7 @@ MonoBehaviour:
   linePrefab: {fileID: 5231572890990959584, guid: 619a314b26d832b459982104460d4b81,
     type: 3}
   currentLine: {fileID: 0}
+  parent: {fileID: 0}
   lineRenderer: {fileID: 0}
   edgeCollider: {fileID: 0}
   fingerPositions: []
@@ -91,6 +99,10 @@ MonoBehaviour:
   levelIndicator: {fileID: 0}
   WinScreen: {fileID: 0}
   LoseScreen: {fileID: 0}
+  TwoSteps: {fileID: 4592753723127998879, guid: 434271aca8cec0e4baddbaa2975f1c40,
+    type: 3}
+  ThreeSteps: {fileID: 7693903962443496744, guid: 619fa9b2e19ee8848802dbe7e3e53753,
+    type: 3}
   analyticsPrefab: {fileID: 0}
   Finish: 0
   DidWin: 0
@@ -106,12 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77303ab91f01781e995012af96db70d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color1: 0
   C1: {r: 0, g: 0, b: 0, a: 0}
+  color2: 0
   C2: {r: 0, g: 0, b: 0, a: 0}
-  C3: {r: 0, g: 0, b: 0, a: 0}
-  SoftenedRGBSubtractiveMix: {r: 0, g: 0, b: 0, a: 1}
-  XYZAdditiveMix: {r: 0, g: 0, b: 0, a: 1}
-  CartoonUnadjusted: {r: 0, g: 0, b: 0, a: 0}
-  SaturationAdjustedRGBSubtractive: {r: 1, g: 0, b: 0, a: 1}
-  SaturationAdjustedXYZAdditive: {r: 1, g: 0, b: 0, a: 1}
-  CartoonAdjusted: {r: 1, g: 0, b: 0, a: 1}
+  lc: []
+  ResultingColor: {r: 0, g: 0, b: 0, a: 0}
