@@ -7,6 +7,9 @@ public class DrawLine : MonoBehaviour
     public GameObject linePrefab;
     public GameObject currentLine;
     public GameObject parent;
+    
+    private GameObject DrawingTut;
+    private GameObject DropButton;
 
     [HideInInspector]
     public LineRenderer lineRenderer;
@@ -14,11 +17,21 @@ public class DrawLine : MonoBehaviour
     public EdgeCollider2D edgeCollider;
     [HideInInspector]
     public List<Vector2> fingerPositions;
+    private void Start() {
+        DrawingTut=GameObject.FindGameObjectWithTag(Tags.DrawingTut);
+        DropButton=GameObject.FindGameObjectWithTag(Tags.DropButton);
+        
+        DropButton.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update(){
         if (Input.GetMouseButtonDown(0))
         {
+            if (DrawingTut.activeSelf==true){
+                DrawingTut.SetActive(false);
+                Invoke("DropButtonActive",SpawnerManager.Instance.DropButtonActivate);
+            }
             creatLine();
 
         }
@@ -47,7 +60,6 @@ public class DrawLine : MonoBehaviour
         currentLine.transform.parent=parent.transform;
     }
 
-
     void UpdateLine(Vector2 newFingerPos)
     {
         fingerPositions.Add(newFingerPos);
@@ -62,6 +74,9 @@ public class DrawLine : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+    void DropButtonActive(){
+        DropButton.SetActive(true);
     }
 }
 

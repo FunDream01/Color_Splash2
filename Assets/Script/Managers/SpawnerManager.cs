@@ -12,6 +12,7 @@ public class SpawnerManager : MonoBehaviour
     public int FinalLoseBalls;
     public bool startSpawning;
     public float delay = 0.1f;
+    public float DropButtonActivate=2;
     float Angle = 0; 
     Vector2 ContainerPosition; 
     public Transform spawner2;

@@ -39,7 +39,6 @@ public class EndPointManager : MonoBehaviour
                     State=2;
                     Filled=true;
                     Win=true;
-                    LevelManager.instant.CheckEndPoints();
                 }
             }
             else{
@@ -48,8 +47,17 @@ public class EndPointManager : MonoBehaviour
                     State=1;
                     Filled=true;
                     Win=false;
-                    LevelManager.instant.CheckEndPoints();
+                    //LevelManager.instant.CheckEndPoints();
                 }
+            }
+        }
+        if (Filled){
+            if(Win){
+                
+                LevelManager.instant.Win();
+            }else{
+
+                LevelManager.instant.Lose();
             }
         }
     }

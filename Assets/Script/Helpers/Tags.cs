@@ -7,5 +7,8 @@ public class Tags
     public static string UI ="UICanvas";
     public static string indicator ="level indicator";
     public static string Resrart ="Resrart";
+    public static string DrawingTut ="DrawingTut";
+    public static string DropButton ="DropButton";
+    //DrawingTut
     //Resrart
 }

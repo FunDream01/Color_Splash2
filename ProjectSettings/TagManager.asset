@@ -11,6 +11,9 @@ TagManager:
   - UICanvas
   - level indicator
   - Resrart
+  - Metaball_liquid
+  - DrawingTut
+  - DropButton
   layers:
   - Default
   - TransparentFX
