@@ -93,7 +93,7 @@ Material:
     - _RefractOffset: 0.0421
     - _RefractionX: -0.003
     - _RefractionY: -0.044
-    - _Speed: 0
+    - _Speed: 5
     - _SrcBlend: 1
     - _Stroke: 0.2
     - _UVSec: 0
