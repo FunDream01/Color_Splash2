@@ -59,8 +59,7 @@ public class EndPointManager : MonoBehaviour
             if(Win){
                 
                 LevelManager.instant.Win();
-                WinParticalSystem.startColor=WinColor32;
-                WinParticalSystem.Play();
+                
             }else{
 
                 LevelManager.instant.Lose();
@@ -75,5 +74,8 @@ public class EndPointManager : MonoBehaviour
             spcolor.a+=10;
         }
         Colored.color = spcolor;
+        WinParticalSystem.startColor=WinColor32;
+        //WinParticalSystem.Play();
+        Instantiate(WinParticalSystem);
     }
 }
