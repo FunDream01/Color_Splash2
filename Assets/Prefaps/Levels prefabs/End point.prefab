@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 8675731534156067355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.33, y: -4.94, z: 0}
-  m_LocalScale: {x: 0.3623, y: 0.3623, z: 0.3623}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8675731535026521841}
   - {fileID: 4202366852432184424}
@@ -266,10 +266,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinColor: 3
-  WinPartical: 0
   NumberOfParticalToWin: 15
-  ElsePartical: 0
   NumberOfParticalToLose: 5
   Filled: 0
   Win: 0
   State: 0
+  Colored: {fileID: 0}
+  spcolor:
+    serializedVersion: 2
+    rgba: 0
