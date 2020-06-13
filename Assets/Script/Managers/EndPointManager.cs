@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EndPointManager : MonoBehaviour
 {
+    public ParticleSystem WinParticalSystem;
     public COLOR_CODE WinColor;
+    
+    public Color32 WinColor32;
     private int WinPartical;
     public int NumberOfParticalToWin;
     private int ElsePartical;
@@ -33,6 +36,7 @@ public class EndPointManager : MonoBehaviour
             Particle particle=other.GetComponent<Particle>();
 
             if (particle.ColorIndex==WinColor){
+                WinColor32=particle.GetComponent<SpriteRenderer>().color;
                 WinPartical++;
                 FillWinColor();
                 if (WinPartical==SpawnerManager.Instance.FinalWinBalls){
@@ -55,6 +59,8 @@ public class EndPointManager : MonoBehaviour
             if(Win){
                 
                 LevelManager.instant.Win();
+                WinParticalSystem.startColor=WinColor32;
+                WinParticalSystem.Play();
             }else{
 
                 LevelManager.instant.Lose();
