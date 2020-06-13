@@ -76,6 +76,6 @@ public class EndPointManager : MonoBehaviour
         Colored.color = spcolor;
         WinParticalSystem.startColor=WinColor32;
         //WinParticalSystem.Play();
-        Instantiate(WinParticalSystem);
+        Instantiate(WinParticalSystem.gameObject,transform);
     }
 }

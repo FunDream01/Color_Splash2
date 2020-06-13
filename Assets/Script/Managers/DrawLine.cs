@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DrawLine : MonoBehaviour
 {
+    public Gradient LineColor;
     public GameObject linePrefab;
     public GameObject currentLine;
     public GameObject parent;
@@ -49,7 +50,9 @@ public class DrawLine : MonoBehaviour
     void creatLine()
     {
         currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
+        
         lineRenderer = currentLine.GetComponent<LineRenderer>();
+        lineRenderer.colorGradient= LineColor;
         edgeCollider = currentLine.GetComponent<EdgeCollider2D>();
         fingerPositions.Clear();
         fingerPositions.Add(Camera.main.ScreenToWorldPoint(Input.mousePosition));
