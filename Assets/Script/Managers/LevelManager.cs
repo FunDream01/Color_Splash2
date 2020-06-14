@@ -16,13 +16,24 @@ public class LevelManager : MonoBehaviour
     public GameObject analyticsPrefab;
     EndPointManager[] managers;
     public int PlayerLevel;
-    int Level;
+    public int Level;
     public bool Finish;
     public bool DidWin;
     void Start()
     {
 
         managers=FindObjectsOfType<EndPointManager>();
+        
+        PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
+        if (SceneManager.GetActiveScene().buildIndex!=PlayerLevel&&PlayerLevel<=12){
+            
+            PlayerPrefs.SetInt("PlayerLevel",SceneManager.GetActiveScene().buildIndex);
+            PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
+
+        }
+        
+        levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
+        levelIndicator.text= "Level "+ PlayerLevel;
 
         if (PlayerPrefs.HasKey("Level"))
         {
@@ -32,12 +43,19 @@ public class LevelManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level", 1);
         }
-        
-        Level = PlayerPrefs.GetInt("Level");
-        levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
-        levelIndicator.text= "Level "+ Level;
+        /*
+        if (PlayerLevel>=12)// total num of levels 
+        {
+            Level = PlayerPrefs.GetInt("Level");
+            levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
+            levelIndicator.text= "Level "+ Level;
+        }else{
+            
+            levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
+            levelIndicator.text= "Level "+ PlayerLevel;
+        }
+        */
 
-        PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
         instant=this;
 
         analytics = FindObjectOfType<Analytics>();
@@ -83,20 +101,22 @@ public class LevelManager : MonoBehaviour
         
     }
     public void Win(){
+        if(!DidWin){ // call function once
             Debug.Log("Win");
+            /*
             Level = PlayerPrefs.GetInt("Level");
-            Level++;
-            PlayerPrefs.SetInt("Level",Level);
-
-            analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex);
-            if (PlayerLevel+1>8){
-                PlayerPrefs.SetInt("PlayerLevel", 1);
-            }else{
-                PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);
+            PlayerPrefs.SetInt("Level",Level+1);
+            */
+            if(StepsManager.Instance.progress!=null){
+            StepsManager.Instance.progress.Dots[StepsManager.Instance.Step].SetActive(true);
             }
+            analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex);
+            PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);
             PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
             FinishGamePlay();
             WinScreen.SetActive(true);
+            DidWin=true;
+        }    
     }
     public void Lose(){
         analytics.LogLevelFailed(SceneManager.GetActiveScene().buildIndex);
@@ -111,7 +131,13 @@ public class LevelManager : MonoBehaviour
     public void RestartScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }public void NextLevel(){
-        SceneManager.LoadScene(PlayerLevel);
+        if (PlayerLevel>12){
+            int RandomLevel = Random.RandomRange(4,13);
+            SceneManager.LoadScene(RandomLevel);
+        }else{
+            
+            SceneManager.LoadScene(PlayerLevel);
+        }
     }
 }
 [System.Serializable]

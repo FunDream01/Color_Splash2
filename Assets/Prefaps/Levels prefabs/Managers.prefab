@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &698375593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698375594}
+  m_Layer: 0
+  m_Name: Draw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698375594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698375593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2862110122207514911}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2862110122207514909
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +43,8 @@ GameObject:
   - component: {fileID: 2862110122207514910}
   - component: {fileID: 2862110122207514897}
   - component: {fileID: 8453913758397805654}
+  - component: {fileID: 1173561826}
+  - component: {fileID: 1811212751932560867}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -30,7 +62,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 698375594}
+  - {fileID: 301686653091767554}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46,18 +80,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61a6ff4a9406d445989ea336ac69fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 9215575143632995489, guid: ef1852cc5abff9c4e8d15472223f865d, type: 3}
+  ball: {fileID: 171188930489879930, guid: 60dde6f20168fbf439236b55a1eea8c8, type: 3}
   spawner: {fileID: 0}
-  NumberOfSteps: 2
-  NumberOfBalls: 100
-  FinalWinBalls: 0
-  FinalLoseBalls: 0
+  NumberOfSteps: 0
+  NumberOfBalls: 40
+  FinalWinBalls: 15
+  FinalLoseBalls: 15
   startSpawning: 0
-  delay: 0.05
+  delay: 0.03
   DropButtonActivate: 2
   spawner2: {fileID: 0}
   spawner3: {fileID: 0}
-  BallsOfSpawner: 
+  BallsOfSpawner: 1400000014000000
 --- !u!114 &2862110122207514910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,10 +104,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a252d52674b81a844b1fd7928c43eee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LineColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
   linePrefab: {fileID: 5231572890990959584, guid: 619a314b26d832b459982104460d4b81,
     type: 3}
   currentLine: {fileID: 0}
-  parent: {fileID: 0}
+  parent: {fileID: 698375593}
   lineRenderer: {fileID: 0}
   edgeCollider: {fileID: 0}
   fingerPositions: []
@@ -91,19 +154,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colors:
   - name: 
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 1, g: 0.11936574, b: 0, a: 1}
   - name: 
-    Color: {r: 0, g: 0, b: 0, a: 0}
-  - name: 
-    Color: {r: 0, g: 0, b: 0, a: 0}
+    Color: {r: 0.5334091, g: 0, b: 1, a: 1}
   levelIndicator: {fileID: 0}
   WinScreen: {fileID: 0}
   LoseScreen: {fileID: 0}
-  TwoSteps: {fileID: 4592753723127998879, guid: 434271aca8cec0e4baddbaa2975f1c40,
+  analyticsPrefab: {fileID: 8891076220722010131, guid: a97a9da61a14c06488976964e23cb523,
     type: 3}
-  ThreeSteps: {fileID: 7693903962443496744, guid: 619fa9b2e19ee8848802dbe7e3e53753,
-    type: 3}
-  analyticsPrefab: {fileID: 0}
+  PlayerLevel: 0
   Finish: 0
   DidWin: 0
 --- !u!114 &8453913758397805654
@@ -118,9 +177,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77303ab91f01781e995012af96db70d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color1: 0
-  C1: {r: 0, g: 0, b: 0, a: 0}
-  color2: 0
-  C2: {r: 0, g: 0, b: 0, a: 0}
-  lc: []
-  ResultingColor: {r: 0, g: 0, b: 0, a: 0}
+  color1: 3
+  C1: {r: 1, g: 0, b: 0.76112175, a: 1}
+  color2: 12
+  C2: {r: 0, g: 1, b: 1, a: 1}
+  lc:
+  - name: 
+    Color: {r: 1, g: 0.37061173, b: 0, a: 1}
+  - name: 
+    Color: {r: 0.19753361, g: 0, b: 1, a: 1}
+  ResultingColor: {r: 0, g: 1, b: 0.39790678, a: 1}
+--- !u!114 &1173561826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862110122207514909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fdadb35b57ba544b4e27a83016b3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Step: 0
+  Cameras: {fileID: 0}
+  UiCanves: {fileID: 0}
+  TwoSteps: {fileID: 4592753723127998879, guid: 434271aca8cec0e4baddbaa2975f1c40,
+    type: 3}
+  ThreeSteps: {fileID: 7693903962443496744, guid: 619fa9b2e19ee8848802dbe7e3e53753,
+    type: 3}
+  progress: {fileID: 0}
+--- !u!114 &1811212751932560867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862110122207514909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fdadb35b57ba544b4e27a83016b3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Step: 0
+  Cameras: {fileID: 0}
+  UiCanves: {fileID: 0}
+  TwoSteps: {fileID: 4592753723127998879, guid: 434271aca8cec0e4baddbaa2975f1c40,
+    type: 3}
+  ThreeSteps: {fileID: 7693903962443496744, guid: 619fa9b2e19ee8848802dbe7e3e53753,
+    type: 3}
+  progress: {fileID: 0}
+--- !u!1 &8921984737199957647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301686653091767554}
+  m_Layer: 0
+  m_Name: Draw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &301686653091767554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921984737199957647}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2862110122207514911}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
