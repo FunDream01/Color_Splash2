@@ -12,8 +12,6 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instant;
     public GameObject WinScreen;
     public GameObject LoseScreen;
-    public GameObject TwoSteps;
-    public GameObject ThreeSteps;
     Analytics analytics;
     public GameObject analyticsPrefab;
     EndPointManager[] managers;
@@ -50,14 +48,7 @@ public class LevelManager : MonoBehaviour
         }
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
         StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,SceneManager.GetActiveScene().buildIndex));
-        if (SpawnerManager.Instance.NumberOfSteps==0){
-
-        }else if (SpawnerManager.Instance.NumberOfSteps==1)
-        {
-            Instantiate(TwoSteps);
-        }else if (SpawnerManager.Instance.NumberOfSteps==2){
-            Instantiate(ThreeSteps);
-        }
+        
         
     }
     void Update()

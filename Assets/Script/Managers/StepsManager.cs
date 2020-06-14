@@ -8,9 +8,25 @@ public class StepsManager : MonoBehaviour
     public GameObject Cameras;
     public GameObject UiCanves;
     public static StepsManager Instance;
+    
+    public GameObject TwoSteps;
+    public GameObject ThreeSteps;
+    
+    public ProgressLevel progress;
     void Start()
     {
         Instance=this;
+
+        if (SpawnerManager.Instance.NumberOfSteps==0){
+
+        }else if (SpawnerManager.Instance.NumberOfSteps==1)
+        {
+            GameObject indecator =  Instantiate(TwoSteps);
+            progress=indecator.GetComponent<ProgressLevel>();
+        }else if (SpawnerManager.Instance.NumberOfSteps==2){
+            GameObject indecator =  Instantiate(ThreeSteps);
+            progress=indecator.GetComponent<ProgressLevel>();
+        }
     }
     void Update()
     {
@@ -22,7 +38,9 @@ public class StepsManager : MonoBehaviour
         FindObjectOfType<SpawnerManager>().enabled=false;
         FindObjectOfType<SpawnerManager>().stopSpawningbutton();
         //UiCanves.SetActive(false);
-
+        if(progress!=null){
+            progress.Dots[step-1].SetActive(true);
+        }
         Vector3 pos = new Vector3(0,step*-7,-10);
         Cameras.transform.DOMove(pos,1,true).OnComplete(delegate{
             

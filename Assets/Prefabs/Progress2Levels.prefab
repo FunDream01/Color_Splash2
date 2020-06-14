@@ -424,7 +424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1907075081698656695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 5611191862974284848}
   - component: {fileID: 9093602303189273683}
   - component: {fileID: 6380450049972269606}
+  - component: {fileID: 7646910873156216620}
   m_Layer: 5
   m_Name: Progress2Levels
   m_TagString: Untagged
@@ -579,6 +580,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7646910873156216620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592753723127998879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51f4dbbfd8eb5a4eaa3ef7583ea28d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dots:
+  - {fileID: 5804756013015640249}
+  - {fileID: 4528217002873159573}
 --- !u!1 &5146463077387265769
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7220684029767268463
 RectTransform:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EndPointManager : MonoBehaviour
 {
+    public float LoseTime;
+    private float CurrentTime;
     public ParticleSystem WinParticalSystem;
     public COLOR_CODE WinColor;
     
@@ -34,7 +36,7 @@ public class EndPointManager : MonoBehaviour
 
             Destroy(other.gameObject);
             Particle particle=other.GetComponent<Particle>();
-
+            
             if (particle.ColorIndex==WinColor){
                 WinColor32=particle.GetComponent<SpriteRenderer>().color;
                 WinPartical++;
