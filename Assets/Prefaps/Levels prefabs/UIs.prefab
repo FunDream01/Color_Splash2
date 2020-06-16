@@ -452,7 +452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -83}
+  m_AnchoredPosition: {x: -75.99994, y: -83}
   m_SizeDelta: {x: 222.8, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &4664941094501807228
@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7, y: -317}
+  m_AnchoredPosition: {x: -79, y: -317}
   m_SizeDelta: {x: 287.40002, y: 153}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &8583001945831083398
@@ -1781,6 +1781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: DrawingTut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544661265750263875, guid: 307f7f4e9abe06149ad49a04c40a0a4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544661265750263935, guid: 307f7f4e9abe06149ad49a04c40a0a4c,
         type: 3}
