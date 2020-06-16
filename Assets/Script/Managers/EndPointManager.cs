@@ -27,9 +27,16 @@ public class EndPointManager : MonoBehaviour
 
     void Update()
     {
+        if(fillTime < 0 ) return;
+        if(Win) return;
+        if(Time.time - fillTime > 4)
+        {
+            LevelManager.instant.Lose();
+        }
         
     }
 
+    float fillTime = -1;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(Tags.Particle)&&StepsManager.Instance.Step==SpawnerManager.Instance.NumberOfSteps){
@@ -38,6 +45,7 @@ public class EndPointManager : MonoBehaviour
             Particle particle=other.GetComponent<Particle>();
             
             if (particle.ColorIndex==WinColor){
+            fillTime = Time.time;
                 WinColor32=particle.GetComponent<SpriteRenderer>().color;
                 WinPartical++;
                 FillWinColor();
@@ -59,7 +67,7 @@ public class EndPointManager : MonoBehaviour
         }
         if (Filled){
             if(Win){
-                
+
                 LevelManager.instant.Win();
                 
             }else{
@@ -80,4 +88,7 @@ public class EndPointManager : MonoBehaviour
         //WinParticalSystem.Play();
         Instantiate(WinParticalSystem.gameObject,transform);
     }
+
+
+   
 }

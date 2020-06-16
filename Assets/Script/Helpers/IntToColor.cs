@@ -127,6 +127,7 @@ public class Mixer
                 rs_created = true;}
                 else
                 {
+                    if(bitPos < lm.colors.Length)
                     rs = ColorMix.CartoonMix(lm.colors[bitPos].Color, rs);
                // rs = ColorMix.AdjustSaturation(rs);
                 } 

@@ -19,6 +19,8 @@ public class SpawnerManager : MonoBehaviour
     public Transform spawner3;
     public int[] BallsOfSpawner;
     public static SpawnerManager Instance;
+
+    const float LOSE_SECONDS = 5f;
     private void Awake() {
         
         Instance=this;
@@ -26,6 +28,8 @@ public class SpawnerManager : MonoBehaviour
     void Start() {
     }
 
+    
+    int step_when_invoked;
     //to start spawning
     public void SpawnButton()
     {
@@ -45,7 +49,25 @@ public class SpawnerManager : MonoBehaviour
                 StartCoroutine(spawning3());
             break;
         }              
-    }                                             
+    
+
+    }
+    bool invoked;
+    private void Update() {
+        if(!invoked && NumberOfBalls <= FinalLoseBalls) {
+        Invoke("CheckLoss",LOSE_SECONDS);
+        invoked = true;
+        step_when_invoked = StepsManager.Instance.Step;
+        }
+    }
+
+    public void CheckLoss()
+    {
+        if(step_when_invoked == StepsManager.Instance.Step) LevelManager.instant.Lose();
+        Debug.Log("# loss");
+        invoked = false;
+    }                             
+
     public void stopSpawningbutton()          
     {
         startSpawning = false;                    // we have this to stop the loop

@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
         managers=FindObjectsOfType<EndPointManager>();
         
         PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
-        if (SceneManager.GetActiveScene().buildIndex!=PlayerLevel&&PlayerLevel<=12){
+        if (SceneManager.GetActiveScene().buildIndex!=PlayerLevel&&PlayerLevel<=13){
             
             PlayerPrefs.SetInt("PlayerLevel",SceneManager.GetActiveScene().buildIndex);
             PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
@@ -33,16 +33,11 @@ public class LevelManager : MonoBehaviour
         }
         
         levelIndicator=GameObject.FindGameObjectWithTag(Tags.indicator).GetComponent<TextMeshProUGUI>();
-        levelIndicator.text= "Level "+ PlayerLevel;
+        levelIndicator.text= "Level "+ (PlayerLevel -1 );
 
-        if (PlayerPrefs.HasKey("Level"))
-        {
-            Level = PlayerPrefs.GetInt("Level");
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Level", 1);
-        }
+      
+        //Level = PlayerPrefs.GetInt("Level", 1);
+       
         /*
         if (PlayerLevel>=12)// total num of levels 
         {
@@ -65,7 +60,7 @@ public class LevelManager : MonoBehaviour
             analytics = analyticsPrefab.GetComponent<Analytics>();
         }
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
-        StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,SceneManager.GetActiveScene().buildIndex));
+        StartCoroutine(analytics.waitToCall(analytics.LogLevelStarted,SceneManager.GetActiveScene().buildIndex - 1));
         
         
     }
@@ -110,7 +105,7 @@ public class LevelManager : MonoBehaviour
             if(StepsManager.Instance.progress!=null){
             StepsManager.Instance.progress.Dots[StepsManager.Instance.Step].SetActive(true);
             }
-            analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex);
+            analytics.LogLevelSucceeded(SceneManager.GetActiveScene().buildIndex - 1);
             PlayerPrefs.SetInt("PlayerLevel", PlayerLevel+1);
             PlayerLevel = PlayerPrefs.GetInt("PlayerLevel");
             FinishGamePlay();
@@ -119,7 +114,7 @@ public class LevelManager : MonoBehaviour
         }    
     }
     public void Lose(){
-        analytics.LogLevelFailed(SceneManager.GetActiveScene().buildIndex);
+        analytics.LogLevelFailed(SceneManager.GetActiveScene().buildIndex - 1);
         Debug.Log("Lose");
         FinishGamePlay();
         LoseScreen.SetActive(true);
@@ -131,8 +126,8 @@ public class LevelManager : MonoBehaviour
     public void RestartScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }public void NextLevel(){
-        if (PlayerLevel>12){
-            int RandomLevel = Random.RandomRange(4,13);
+        if (PlayerLevel>13){
+            int RandomLevel = Random.Range(4,14);
             SceneManager.LoadScene(RandomLevel);
         }else{
             
