@@ -19,8 +19,11 @@ public class SpawnerManager : MonoBehaviour
     public Transform spawner3;
     public int[] BallsOfSpawner;
     public static SpawnerManager Instance;
-    void Start() {
+    private void Awake() {
+        
         Instance=this;
+    }
+    void Start() {
     }
 
     //to start spawning
