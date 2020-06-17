@@ -33,7 +33,7 @@ MonoBehaviour:
   - cd902cfb71ffda8d07a70db750c5e9fc2f4bb93d
   Build:
   - 1
-  - 1
+  - 0.1
   SelectedPlatformOrganization:
   - Abdulrahman adham
   - Abdulrahman adham
@@ -46,9 +46,18 @@ MonoBehaviour:
   SelectedPlatformGameID: cc8a0100cd8a0100
   SelectedOrganization: 0200000002000000
   SelectedStudio: 0100000001000000
-  SelectedGame: 020000000d000000
-  NewVersion: 
-  Changes: 
+  SelectedGame: 030000000f000000
+  NewVersion: 6.2.1
+  Changes: '6.2.1
+
+    - added better error messages for API calls potentially being
+    removed in the future
+
+
+    6.2.0
+
+    - exposed functions to get AB testing
+    id and variant id'
   SignUpOpen: 0
   StudioName: FunDreamStudios
   GameName: Color Splash IOS

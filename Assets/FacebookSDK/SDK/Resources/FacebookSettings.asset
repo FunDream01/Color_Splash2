@@ -16,9 +16,9 @@ MonoBehaviour:
   clientTokens:
   - 
   appIds:
-  - 717235872360857
+  - 1034407937015969
   appLabels:
-  - Color Splash
+  - Splash Lab
   cookie: 1
   logging: 1
   status: 1
