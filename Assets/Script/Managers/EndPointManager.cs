@@ -19,6 +19,7 @@ public class EndPointManager : MonoBehaviour
     public int State=0; 
     public SpriteRenderer Colored;
     public Color32 spcolor;
+    const float LOSE_SECONDS = 8.5f;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class EndPointManager : MonoBehaviour
     {
         if(fillTime < 0 ) return;
         if(Win) return;
-        if(Time.time - fillTime > 4)
+        if(Time.time - fillTime > LOSE_SECONDS)
         {
             LevelManager.instant.Lose();
         }

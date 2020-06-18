@@ -9,7 +9,7 @@ public class PartEnd : MonoBehaviour
     public float DotsNeeded;
     public float startTime = -1;
     public bool oki = false;
-    const float LOSE_SECONDS = 5.5f;
+    const float LOSE_SECONDS = 6.5f;
     public bool loss = false;
     void Start()
     {

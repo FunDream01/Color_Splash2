@@ -20,7 +20,7 @@ public class SpawnerManager : MonoBehaviour
     public int[] BallsOfSpawner;
     public static SpawnerManager Instance;
 
-    const float LOSE_SECONDS = 5f;
+    const float LOSE_SECONDS = 14f;
     private void Awake() {
         
         Instance=this;
