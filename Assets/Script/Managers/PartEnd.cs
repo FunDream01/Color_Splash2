@@ -7,9 +7,9 @@ public class PartEnd : MonoBehaviour
     public int NextPartIndex;
     public float NumberofDots;
     public float DotsNeeded;
-    public float startTime = -1;
+    float startTime = -1;
     public bool oki = false;
-    const float LOSE_SECONDS = 6.5f;
+    const float LOSE_SECONDS = 12.5f;
     public bool loss = false;
     void Start()
     {
@@ -33,11 +33,10 @@ public class PartEnd : MonoBehaviour
 
         if (other.CompareTag(Tags.Particle))
         {
-            if(myJob) startTime = Time.time;
+            startTime = Time.time;
             NumberofDots++;
             if (myJob && NumberofDots == SpawnerManager.Instance.BallsOfSpawner[NextPartIndex-1] && !loss)
             {
-
             startTime = -1;
             oki = true;
                 StepsManager.Instance.NextStep(NextPartIndex);
