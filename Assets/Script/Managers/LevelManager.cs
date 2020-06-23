@@ -111,6 +111,8 @@ public class LevelManager : MonoBehaviour
             FinishGamePlay();
             WinScreen.SetActive(true);
             DidWin=true;
+        var x = FindObjectOfType<DrawLine>().HandDrop;
+        if(x != null) x.SetActive(false);
         }    
     }
     public void Lose(){
@@ -118,6 +120,8 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Lose");
         FinishGamePlay();
         LoseScreen.SetActive(true);
+        var x = FindObjectOfType<DrawLine>().HandDrop;
+        if(x != null) x.SetActive(false);
     }
     void FinishGamePlay(){
         FindObjectOfType<DrawLine>().enabled=false;
