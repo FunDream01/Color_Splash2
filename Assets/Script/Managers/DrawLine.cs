@@ -29,14 +29,14 @@ public class DrawLine : MonoBehaviour
         DropButton.SetActive(false);
     }
     public bool tutorial;
-    public bool freeze ;
+    public bool freeze;
 
-    public GameObject [] Slidings;
+    public GameObject[] Slidings;
     public GameObject HandDrop;
     // Update is called once per frame
     void Update()
     {
-        if(freeze) return;
+        if (freeze) return;
         if (Input.GetMouseButtonDown(0))
         {
             if (!tutorial)
@@ -47,7 +47,7 @@ public class DrawLine : MonoBehaviour
                     Invoke("DropButtonActive", SpawnerManager.Instance.DropButtonActivate);
                 }
             }
-         
+
             creatLine();
 
         }
@@ -59,24 +59,31 @@ public class DrawLine : MonoBehaviour
                 UpdateLine(tempFingerPos);
             }
         }
-        if(Input.GetMouseButtonUp(0) && tutorial)
+        if (Input.GetMouseButtonUp(0) && tutorial)
         {
-                if (parent.transform.childCount >= 2)
+
+            if (parent.transform.childCount == 1)
+            {
+                Slidings[1].SetActive(true);
+                Slidings[2].SetActive(false);
+            }
+
+            if (parent.transform.childCount >= 2)
+            {
+                if (DrawingTut.activeSelf == true)
                 {
-                    if (DrawingTut.activeSelf == true)
+                    DrawingTut.SetActive(false);
+                    DropButtonActive();
+                    Overlay.sprite = DropTutorial;
+                    tutorial = false;
+                    freeze = true;
+                    HandDrop.SetActive(true);
+                    foreach (GameObject s in Slidings)
                     {
-                        DrawingTut.SetActive(false);
-                        DropButtonActive();
-                        Overlay.sprite = DropTutorial;
-                        tutorial = false;
-                        freeze = true;
-                        HandDrop.SetActive(true);
-                        foreach(GameObject s in Slidings)
-                        {
-                            s.SetActive(false);
-                        }
+                        s.SetActive(false);
                     }
                 }
+            }
         }
 
     }
