@@ -18,7 +18,7 @@ public class DrawLine : MonoBehaviour
     public EdgeCollider2D edgeCollider;
     [HideInInspector]
     public List<Vector2> fingerPositions;
-
+    public GameObject TutImage;
     public Sprite DropTutorial;
     public SpriteRenderer Overlay;
     private void Start()
@@ -78,6 +78,8 @@ public class DrawLine : MonoBehaviour
                     tutorial = false;
                     freeze = true;
                     HandDrop.SetActive(true);
+                    if(TutImage!=null)
+                    TutImage.SetActive(false);
                     foreach (GameObject s in Slidings)
                     {
                         s.SetActive(false);

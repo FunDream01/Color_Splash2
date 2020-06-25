@@ -19,7 +19,7 @@ public class EndPointManager : MonoBehaviour
     public int State=0; 
     public SpriteRenderer Colored;
     public Color32 spcolor;
-    const float LOSE_SECONDS = 12.5f;
+    const float LOSE_SECONDS = 10f;
 
     void Start()
     {

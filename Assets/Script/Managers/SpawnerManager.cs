@@ -20,7 +20,7 @@ public class SpawnerManager : MonoBehaviour
     public int[] BallsOfSpawner;
     public static SpawnerManager Instance;
 
-    const float LOSE_SECONDS = 14f;
+    const float LOSE_SECONDS = 12f;
     private void Awake() {
         
         Instance=this;
@@ -63,7 +63,9 @@ public class SpawnerManager : MonoBehaviour
 
     public void CheckLoss()
     {
-        if(step_when_invoked == StepsManager.Instance.Step) LevelManager.instant.Lose();
+        if(step_when_invoked == StepsManager.Instance.Step) {
+            LevelManager.instant.Lose();
+            }
         Debug.Log("# loss");
         invoked = false;
     }                             

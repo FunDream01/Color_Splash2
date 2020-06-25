@@ -116,6 +116,8 @@ public class LevelManager : MonoBehaviour
         }    
     }
     public void Lose(){
+
+       if(LevelManager.instant.DidWin) return;
         analytics.LogLevelFailed(SceneManager.GetActiveScene().buildIndex - 1);
         Debug.Log("Lose");
         FinishGamePlay();
